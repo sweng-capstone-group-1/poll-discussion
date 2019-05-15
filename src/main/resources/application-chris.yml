@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+hello-string: Hello, I'm Chris.
+
+loggingPath: c:\tmp
