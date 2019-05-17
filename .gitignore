@@ -19,6 +19,8 @@ local.properties
 .apt_generated/
 .buildpath
 
+logs_dir_IS_UNDEFINED/
+
 # IntelliJ
 .idea
 *.iml
