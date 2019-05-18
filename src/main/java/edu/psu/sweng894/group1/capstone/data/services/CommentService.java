@@ -11,15 +11,12 @@ public class CommentService {
         this.commentRepository = commentRepository;
     }
 
-    public Comment insertComment(Comment comment) {
+    public Comment createComment(Comment comment) {
         return null;
     }
 
-    public Comment updateComment(Comment comment) {
+    public Comment addReply(Comment comment, Comment replyTo) {
         return null;
     }
 
-    public Comment deleteComment(Comment comment) {
-        return null;
-    }
 }
