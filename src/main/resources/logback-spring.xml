@@ -2,7 +2,7 @@
 <configuration>
 
     <!-- Get the logging directory from the spring properties -->
-    <springProperty name="logs_dir" source="loggingPath" />
+<!--    <springProperty name="logs_dir" source="loggingPath" />-->
 
     <!--Appender pattern for both of our appenders-->
     <property name="appenderPattern" value="%d{yyyy-MM-dd'T'HH:mm:ss.SSSX,America/New_York}\t%level\t[%thread]\t[%logger]\t%msg%n" />
@@ -15,23 +15,23 @@
     </appender>
 
     <!--File appender-->
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+<!--    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
 
-        <file>${logs_dir}/capstone.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!-- daily rollover -->
-            <fileNamePattern>${logs_dir}/capstone.log.%d{yyyy-MM-dd}</fileNamePattern>
-        </rollingPolicy>
+<!--        <file>${logs_dir}/capstone.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            &lt;!&ndash; daily rollover &ndash;&gt;-->
+<!--            <fileNamePattern>${logs_dir}/capstone.log.%d{yyyy-MM-dd}</fileNamePattern>-->
+<!--        </rollingPolicy>-->
 
-        <encoder>
-            <pattern>${appenderPattern}</pattern>
-        </encoder>
-    </appender>
+<!--        <encoder>-->
+<!--            <pattern>${appenderPattern}</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
 
     <logger name="edu.psu.sweng894" level="TRACE"/>
 
     <root level="WARN">
         <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="FILE" />
+<!--        <appender-ref ref="FILE" />-->
     </root>
 </configuration>

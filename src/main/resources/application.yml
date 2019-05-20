@@ -5,4 +5,5 @@ server:
 
 hello-string: Hello World!
 
+# NOTE: no longer used due to the move to Heroku
 loggingPath: #define in your profile
