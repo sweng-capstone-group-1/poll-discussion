@@ -3,4 +3,4 @@ server:
 
 hello-string: Hello, I'm Chris.
 
-loggingPath: c:\tmp
+#loggingPath: c:\tmp
