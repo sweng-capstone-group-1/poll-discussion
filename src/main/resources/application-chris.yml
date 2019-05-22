@@ -3,8 +3,3 @@ server:
 
 hello-string: Hello, I'm Chris.
 
-spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/jsp/
-      suffix: .jsp
