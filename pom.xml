@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Capstone Project</name>
     <description>Sweng 894 Group 1 Capstone Project</description>
+    <packaging>war</packaging>
 
     <properties>
         <java.version>11</java.version>
