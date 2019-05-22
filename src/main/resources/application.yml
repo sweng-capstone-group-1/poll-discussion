@@ -10,7 +10,7 @@ loggingPath: #define in your profile
 spring:
   datasource:
     url: postgres://ctjhrubwhvmfiq:959bcab877a90679d58ebfcbe1f96d428e4adf3e8cd4f0c3968777981ad7f469@ec2-54-235-114-242.compute-1.amazonaws.com:5432/d19p1hpubqedo5
-#  mvc:
-#    view:
-#      prefix: /templates
-#      suffix: .jsp
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp

@@ -1,2 +1,3 @@
-
-$(document).append("Appended by jQuery");
+$(document).ready(function () {
+    $('body').append("Appended by jQuery")
+});
