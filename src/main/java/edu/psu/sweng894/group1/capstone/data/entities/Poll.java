@@ -11,10 +11,49 @@ public class Poll {
      * The title, shown in lists of polls.
      */
     private String title;
-    /**
-     * Maybe the user can choose only one option or they can chose two options, or three.
-     */
-    private Integer numberOfOptionsAllowed;
+
+    private Integer creator;
+
+    private Integer creationDate;
+
+    private String description;
+
+    private Boolean anonymous;
+
+    private Boolean open;
+
+
+    public Integer getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Integer creator) {
+        this.creator = creator;
+    }
+
+    public Integer getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Integer creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public Boolean getAnonymous() {
+        return anonymous;
+    }
+
+    public void setAnonymous(Boolean anonymous) {
+        this.anonymous = anonymous;
+    }
+
+    public Boolean getOpen() {
+        return open;
+    }
+
+    public void setOpen(Boolean open) {
+        this.open = open;
+    }
 
     public Integer getId() {
         return id;
@@ -40,13 +79,6 @@ public class Poll {
         this.description = description;
     }
 
-    private String description;
 
-    public Integer getNumberOfOptionsAllowed() {
-        return numberOfOptionsAllowed;
-    }
 
-    public void setNumberOfOptionsAllowed(Integer numberOfOptionsAllowed) {
-        this.numberOfOptionsAllowed = numberOfOptionsAllowed;
-    }
 }
