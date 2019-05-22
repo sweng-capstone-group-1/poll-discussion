@@ -1,7 +1,6 @@
 server:
   servlet:
     context-path: /forum
-  port: 8081
 
 hello-string: Hello World!
 
