@@ -1,55 +1,48 @@
 package edu.psu.sweng894.group1.capstone.data.entities;
 
+import java.beans.Transient;
+
 /**
  * Defines the users of the application.
  */
 public class User {
 
-    private Integer id;
+	private Integer id;
+	private String username;
+	private String password;
+	private String passwordConfirm;
 
-    private String firstName;
-    private String middleName;
-    private String lastName;
+	public String getPassword() {
+		return password;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    private String password;
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	@Transient
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
+	}
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
