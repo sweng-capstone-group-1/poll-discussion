@@ -45,4 +45,9 @@ public class HelloWorldController {
         String allNames = names.stream().collect(Collectors.joining(","));
         return capstoneProperties.getHelloString() + " db list: " + allNames;
     }
+
+    @GetMapping("helloJsp")
+    public String helloJsp() {
+        return "hello";
+    }
 }
