@@ -3,4 +3,8 @@ server:
 
 hello-string: Hello, I'm Chris.
 
-#loggingPath: c:\tmp
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
