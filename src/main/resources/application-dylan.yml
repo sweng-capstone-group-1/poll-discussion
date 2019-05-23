@@ -2,3 +2,6 @@ server:
   port: 8080
 
 loggingPath: /Users/dylanpoljak/Desktop/logs
+
+spring.mvc.view.prefix: /WEB-INF/jsp/
+spring.mvc.view.suffix: .jsp
