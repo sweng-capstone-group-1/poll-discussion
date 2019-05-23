@@ -4,8 +4,6 @@ server:
 
 hello-string: Hello World!
 
-# NOTE: no longer used due to the move to Heroku
-loggingPath: #define in your profile
 spring:
   datasource:
     url: jdbc:postgresql://ec2-54-235-114-242.compute-1.amazonaws.com:5432/d19p1hpubqedo5
