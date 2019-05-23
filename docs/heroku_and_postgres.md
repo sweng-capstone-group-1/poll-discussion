@@ -19,6 +19,8 @@ The application will be hosted on Heroku which also contains an PostgreSQL datab
     the command line client. This will only be done once.
 - add the Heroku as a remote on your Git repo. Via the command line, ```cd``` to the repo, then type 
 ```git remote add heroku https://git.heroku.com/sweng894capstone.git```
+- to push the application to Heroku you must commit your changes to master then type
+    ```git push heroku master```
  
 #### Logging
 Note that Heroku does not allow file system logging. As a result, the logback file system logging that was originally
