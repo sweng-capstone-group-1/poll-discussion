@@ -3,7 +3,8 @@
 ## Tools Used
 - Java 11
 - Spring Boot (this does not need to be installed)
-- Postgres
+- [PostgreSQL](docs/heroku_and_postgres.md)
+- [Heroku](docs/heroku_and_postgres.md)
 
 ## Getting Started
 
