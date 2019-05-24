@@ -20,6 +20,13 @@ public class PollOption {
      */
     private String helpText;
 
+    public PollOption() {}
+
+    public PollOption(Integer pollId, String description) {
+        this.pollId = pollId;
+        this.description = description;
+    }
+
     public Integer getId() {
         return id;
     }
