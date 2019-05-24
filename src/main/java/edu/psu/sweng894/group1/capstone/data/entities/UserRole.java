@@ -7,9 +7,9 @@ public class UserRole {
 
     private Integer id;
 
-    private Integer role;
+    private Integer roleId;
 
-    private Integer user;
+    private Integer userId;
 
     public Integer getId() {
         return id;
@@ -19,19 +19,19 @@ public class UserRole {
         this.id = id;
     }
 
-    public Integer getRole() {
-        return role;
+    public Integer getRoleId() {
+        return roleId;
     }
 
-    public void setRole(Integer role) {
-        this.role = role;
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 
-    public Integer getUser() {
-        return user;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUser(Integer user) {
-        this.user = user;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

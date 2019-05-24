@@ -4,20 +4,10 @@ package edu.psu.sweng894.group1.capstone.data.entities;
  * A user's selection on a poll.
  */
 public class PollSelection {
-
-    private Integer poll;
-
     private Integer user;
 
-    private Integer pollOptions;
-
-    public Integer getPoll() {
-        return poll;
-    }
-
-    public void setPoll(Integer poll) {
-        this.poll = poll;
-    }
+    // a poll option is tied to a poll, so we don't also need a poll here
+    private Integer pollOptionId;
 
     public Integer getUser() {
         return user;
@@ -27,11 +17,11 @@ public class PollSelection {
         this.user = user;
     }
 
-    public Integer getPollOptions() {
-        return pollOptions;
+    public Integer getPollOptionId() {
+        return pollOptionId;
     }
 
-    public void setPollOptions(Integer pollOptions) {
-        this.pollOptions = pollOptions;
+    public void setPollOptionId(Integer pollOptionId) {
+        this.pollOptionId = pollOptionId;
     }
 }

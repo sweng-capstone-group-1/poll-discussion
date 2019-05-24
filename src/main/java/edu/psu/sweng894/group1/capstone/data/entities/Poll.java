@@ -14,7 +14,7 @@ public class Poll {
 
     private Integer creator;
 
-    private Integer creationDate;
+    private Integer createdAt;
 
     private String description;
 
@@ -31,12 +31,12 @@ public class Poll {
         this.creator = creator;
     }
 
-    public Integer getCreationDate() {
-        return creationDate;
+    public Integer getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreationDate(Integer creationDate) {
-        this.creationDate = creationDate;
+    public void setCreatedAt(Integer creationDate) {
+        this.createdAt = creationDate;
     }
 
     public Boolean getAnonymous() {

@@ -16,6 +16,7 @@ public class Comment {
      * The parent, optional, of this comment. If this comment is a reply to a comment, this
      * is non-null. If this comment is attached directly to a poll, this is null.
      */
+    // I think this is premature. We don't need to do threading yet and we should add this when it's needed
     private Integer parentId;
 
     /**
@@ -25,8 +26,8 @@ public class Comment {
 
     private Integer creator;
     private Date creationDate;
-    private Integer lastModifiedBy;
-    private Integer lastModifiedDate;
+    private Integer updatedBy;
+    private Integer updatedAt;
 
     public Integer getId() {
         return id;
@@ -68,19 +69,19 @@ public class Comment {
         this.creationDate = creationDate;
     }
 
-    public Integer getLastModifiedBy() {
-        return lastModifiedBy;
+    public Integer getUpdatedBy() {
+        return updatedBy;
     }
 
-    public void setLastModifiedBy(Integer lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
+    public void setUpdatedBy(Integer updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
-    public Integer getLastModifiedDate() {
-        return lastModifiedDate;
+    public Integer getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setLastModifiedDate(Integer lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
+    public void setUpdatedAT(Integer updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
