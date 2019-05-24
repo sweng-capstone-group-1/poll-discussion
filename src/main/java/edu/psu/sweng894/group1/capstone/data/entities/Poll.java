@@ -1,5 +1,7 @@
 package edu.psu.sweng894.group1.capstone.data.entities;
 
+import java.util.Date;
+
 /**
  * Main entity for a poll.
  */
@@ -12,9 +14,9 @@ public class Poll {
      */
     private String title;
 
-    private Integer creator;
+    private Integer creatorId;
 
-    private Integer createdAt;
+    private Date createdAt;
 
     private String description;
 
@@ -22,20 +24,31 @@ public class Poll {
 
     private Boolean open;
 
-
-    public Integer getCreator() {
-        return creator;
+    public Poll() {
     }
 
-    public void setCreator(Integer creator) {
-        this.creator = creator;
+    public Poll(String title, Integer creatorId, Date createdAt, String description, Boolean anonoymous, Boolean open) {
+        this.title = title;
+        this.creatorId = creatorId;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.anonymous = anonoymous;
+        this.open = open;
     }
 
-    public Integer getCreatedAt() {
+    public Integer getCreatorId() {
+        return creatorId;
+    }
+
+    public void setCreatorId(Integer creatorId) {
+        this.creatorId = creatorId;
+    }
+
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Integer creationDate) {
+    public void setCreatedAt(Date creationDate) {
         this.createdAt = creationDate;
     }
 
