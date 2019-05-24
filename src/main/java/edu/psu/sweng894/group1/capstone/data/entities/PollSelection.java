@@ -8,6 +8,13 @@ public class PollSelection {
 
     private Integer pollOptionId;
 
+    public PollSelection() {}
+
+    public PollSelection(Integer userId, Integer pollOptionId) {
+        this.userId = userId;
+        this.pollOptionId = pollOptionId;
+    }
+
     public Integer getUserId() {
         return userId;
     }
