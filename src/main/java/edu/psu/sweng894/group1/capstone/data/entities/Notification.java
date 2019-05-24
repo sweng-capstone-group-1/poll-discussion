@@ -4,6 +4,7 @@ package edu.psu.sweng894.group1.capstone.data.entities;
 // At best maybe we do need it, but we don't need it yet
 // But why are we saving notifications in the DB? Even if we want a notification object,
 // it shouldn't need an id.
+// I think we should use email https://www.quickprogrammingtips.com/spring-boot/how-to-send-email-from-spring-boot-applications.html
 public class Notification {
     private Integer id;
     private String notificationType;

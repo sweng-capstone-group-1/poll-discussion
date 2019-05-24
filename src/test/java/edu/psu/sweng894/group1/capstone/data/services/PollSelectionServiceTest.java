@@ -1,53 +1,37 @@
 package edu.psu.sweng894.group1.capstone.data.services;
 
-import edu.psu.sweng894.group1.capstone.data.entities.Poll;
-import edu.psu.sweng894.group1.capstone.data.repositories.PollRepository;
+import edu.psu.sweng894.group1.capstone.data.entities.PollOption;
+import edu.psu.sweng894.group1.capstone.data.entities.PollSelection;
+import edu.psu.sweng894.group1.capstone.data.entities.User;
+import edu.psu.sweng894.group1.capstone.data.repositories.PollSelectionRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PollServiceTest {
+public class PollSelectionServiceTest {
 
-    private PollService pollService;
+    private PollSelectionService pollSelectionService;
 
     @Before
     public void before() {
         // stub the repository
-        PollRepository repo = new PollRepository() {
+        PollSelectionRepository repo = new PollSelectionRepository() {
 
         };
 
-        pollService = new PollService(repo);
+        pollSelectionService = new PollSelectionService(repo);
 
     }
 
     @Test
-    public void testPollInsertion() {
-
-        Poll inputPoll = new Poll();
-        inputPoll.setTitle("Test Poll");
-
-        Poll resultPoll = pollService.createPoll(inputPoll);
-        Assert.assertNotNull("Result Poll is null", resultPoll);
-        Assert.assertNotNull("poll id is null", resultPoll.getId());
-        Assert.assertEquals(inputPoll.getTitle(), resultPoll.getTitle());
-    }
-
-    @Test
-    public void testPollUpdate() {
-
-        Poll inputPoll = new Poll();
-        inputPoll.setTitle("Test Poll");
-
-        Poll resultPoll = pollService.createPoll(inputPoll);
-
-        String newTitle = "Updated Title";
-        resultPoll.setTitle(newTitle);
-
-        Poll updatedPoll = pollService.updatePoll(resultPoll);
-        Assert.assertNotNull("Updated Poll is null", updatedPoll);
-        Assert.assertEquals(newTitle, updatedPoll.getTitle());
-
+    public void addVote() {
+        PollOption testOption = new PollOption();
+        testOption.setId(1);
+        User testUser = new User();
+        testUser.setId(2);
+        PollSelection testPollSelection = pollSelectionService.addVote(testOption, testUser);
+        Assert.assertEquals(testPollSelection.getPollOptionId(), testOption.getId());
+        Assert.assertEquals(testPollSelection.getUserId(), testUser.getId());
     }
 
 }

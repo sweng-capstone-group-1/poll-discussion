@@ -11,6 +11,7 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private String username;
+	private String email;
 	private String password;
 	private String passwordConfirm;
 
@@ -29,6 +30,10 @@ public class User {
 	public String getLastName() { return lastName; }
 
 	public void setLastName(String lastName) { this.lastName = lastName; }
+
+	public String getEmail() { return email; }
+
+	public void setEmail(String email) { this.email = email; }
 
 	public Integer getId() {
 		return id;

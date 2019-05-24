@@ -8,12 +8,6 @@ public class PollOption {
 
     private Integer id;
     /**
-     * We may give the users options: A, B or C or 1, 2 or 3.
-     */
-    // I think this is another thing that we don't really need
-    // it could be an enhancement, but should be removed for now
-    private String displayId;
-    /**
      * Relates this option to a poll.
      */
     private Integer pollId;
@@ -25,11 +19,6 @@ public class PollOption {
      * Could be additional details about the description.
      */
     private String helpText;
-    /**
-     * The order in which this poll appears in the list.
-     */
-    // this is another thing that could be an enhancement, but is too much now
-    private Integer order;
 
     public Integer getId() {
         return id;
@@ -37,14 +26,6 @@ public class PollOption {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getDisplayId() {
-        return displayId;
-    }
-
-    public void setDisplayId(String displayId) {
-        this.displayId = displayId;
     }
 
     public Integer getPollId() {
@@ -69,13 +50,5 @@ public class PollOption {
 
     public void setHelpText(String helpText) {
         this.helpText = helpText;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
     }
 }
