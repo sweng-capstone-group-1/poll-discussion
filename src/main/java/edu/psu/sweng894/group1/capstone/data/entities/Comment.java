@@ -13,22 +13,21 @@ public class Comment {
     private Integer id;
 
     /**
-     * The parent, optional, of this comment. If this comment is a reply to a comment, this
-     * is non-null. If this comment is attached directly to a poll, this is null.
-     */
-    // I think this is premature. We don't need to do threading yet and we should add this when it's needed
-    private Integer parentId;
-
-    /**
      * The poll for this comment.
      */
-    private Integer poll;
-
-    private Integer creator;
+    private Integer pollId;
+    private String content;
+    private Integer creatorId;
     private Date creationDate;
     private Integer updatedBy;
-    private Integer updatedAt;
+    private Date updatedAt;
 
+    public Comment(Integer pollId, Integer creatorId, Date creationDate, String content) {
+        this.pollId = pollId;
+        this.creatorId = creatorId;
+        this.creationDate = creationDate;
+        this.content = content;
+    }
     public Integer getId() {
         return id;
     }
@@ -37,28 +36,24 @@ public class Comment {
         this.id = id;
     }
 
-    public Integer getParentId() {
-        return parentId;
+    public Integer getPollId() {
+        return pollId;
     }
 
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
+    public void setPollId(Integer pollId) {
+        this.pollId = pollId;
     }
 
-    public Integer getPoll() {
-        return poll;
+    public String getContent() { return content; }
+
+    public void setContent(String content) { this.content = content; }
+
+    public Integer getCreatorId() {
+        return creatorId;
     }
 
-    public void setPoll(Integer poll) {
-        this.poll = poll;
-    }
-
-    public Integer getCreator() {
-        return creator;
-    }
-
-    public void setCreator(Integer creator) {
-        this.creator = creator;
+    public void setCreatorId(Integer creatorId) {
+        this.creatorId = creatorId;
     }
 
     public Date getCreationDate() {
@@ -77,11 +72,11 @@ public class Comment {
         this.updatedBy = updatedBy;
     }
 
-    public Integer getUpdatedAt() {
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAT(Integer updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
 }
