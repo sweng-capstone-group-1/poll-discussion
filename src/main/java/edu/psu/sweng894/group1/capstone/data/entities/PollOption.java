@@ -8,13 +8,9 @@ public class PollOption {
 
     private Integer id;
     /**
-     * We may give the users options: A, B or C or 1, 2 or 3.
-     */
-    private String displayId;
-    /**
      * Relates this option to a poll.
      */
-    private Integer poll;
+    private Integer pollId;
     /**
      * The primary text the user sees when selecting.
      */
@@ -23,10 +19,13 @@ public class PollOption {
      * Could be additional details about the description.
      */
     private String helpText;
-    /**
-     * The order in wihich this poll appears in the list.
-     */
-    private Integer order;
+
+    public PollOption() {}
+
+    public PollOption(Integer pollId, String description) {
+        this.pollId = pollId;
+        this.description = description;
+    }
 
     public Integer getId() {
         return id;
@@ -36,20 +35,12 @@ public class PollOption {
         this.id = id;
     }
 
-    public String getDisplayId() {
-        return displayId;
+    public Integer getPollId() {
+        return pollId;
     }
 
-    public void setDisplayId(String displayId) {
-        this.displayId = displayId;
-    }
-
-    public Integer getPoll() {
-        return poll;
-    }
-
-    public void setPoll(Integer poll) {
-        this.poll = poll;
+    public void setPollId(Integer pollId) {
+        this.pollId = pollId;
     }
 
     public String getDescription() {
@@ -66,13 +57,5 @@ public class PollOption {
 
     public void setHelpText(String helpText) {
         this.helpText = helpText;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
     }
 }
