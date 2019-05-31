@@ -1,12 +1,18 @@
 package edu.psu.sweng894.group1.capstone.data.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.beans.Transient;
 
 /**
  * Defines the users of the application.
  */
+@Entity
+@Table(name = "Application_User")
 public class User {
 
+	@Id
 	private Integer id;
 	private String username;
 	private String email;
