@@ -1,9 +1,9 @@
 package edu.psu.sweng894.group1.capstone;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJdbcRepositories
+@EnableJpaRepositories
 public class CapstoneConfiguration {
 }
